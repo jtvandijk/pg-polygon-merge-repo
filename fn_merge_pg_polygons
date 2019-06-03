@@ -1,24 +1,24 @@
 #!/bin/bash
 
 # postgres credentials
-h=$1								# host
-p=$2								# port
-d=$3								# database
-u=$4								# username
+h=$1
+p=$2
+d=$3
+u=$4
 
 # table parameters
-schema=$5						# pg schema
-base_table=$6 			# input table name
-merg_table=$7				#	output table name
+schema=$5
+base_table=$6
+merg_table=$7
 
 # column names
-gid=$8							# unique identifier
-geom=$9							# geometry column (polygon, projected)
-cent=${10}					# centroid column (polygon centroid, projected)
-var=${11}						# field to decide if polygon requires to be merged
+gid=$8
+geom=$9
+cent=${10}
+var=${11}
 
 # union parameters
-val=${12}						# minimum value to decide if polygon requires to be merged
+val=${12}
 
 # drop sequence
 drop_sequence () {

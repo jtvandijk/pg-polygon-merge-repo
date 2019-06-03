@@ -1,7 +1,7 @@
 # Iteratively Merge Polygons in Postgres
 
 #### About
-Bash script (using psql) that allows you to iteratively merge (aggregate) adjacent polygons stored in a Postgres/PostGIS database using a minimum attribute value. 
+Shell script (using psql) that allows you to iteratively merge (aggregate) adjacent polygons stored in a Postgres/PostGIS database using a minimum attribute value. 
 For instance, if you have polygons containing population data and you require all polygons to contain a minimum
 of 1,000 people, you can use this script to iteratively merge adjacent polygons until this threshold has been reached. With a large number of 
 polygons to be aggregate this process may be slow. 
