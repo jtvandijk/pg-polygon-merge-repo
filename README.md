@@ -17,11 +17,8 @@ The following steps are taken until all polygons meet the mimimum value requirem
 8. Repeat.
 
 #### Usage
-The script can be excecuted by passing __12__ arguments. Arguments simply need to be provided to a config file in the
-exact order that is shown below. See _config_example.txt_ for an example. All arguments are required. Input table needs to be set up (including required columns) before running. 
+The script can be excecuted by passing __12__ arguments. Arguments simply need to be provided through a config file. All arguments are required. Arguments need to be in the exact order that is shown below. See _config_example.txt_ for an example. Please note that the nput table needs to be set up, including required columns, before running the script. 
 
-  fn_merge_pg_polygons [configfile]
-    
     host:         postgres server
     port:         postgres port
     database:     postgres database
