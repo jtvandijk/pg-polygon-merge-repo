@@ -51,7 +51,7 @@ order that is shown below. See _config_example.txt_ for an example. All argument
     ./fn_merge_pg_polygons server --config="config_example.txt"
 
 #### Output
-The final output is a new table table in your Postgres/PostGIS database that contains the merged polygons, all of which will have at least the mimimum value for the variable of interest that was specified.
+The final output is a new table table in your Postgres/PostGIS database that contains the merged polygons, all of which will have at least the desired mimimum value for the variable of interest that was specified.
 
 #### Dependencies
 * __psql__ 
