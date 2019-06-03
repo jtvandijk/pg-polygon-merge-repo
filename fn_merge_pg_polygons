@@ -61,7 +61,7 @@ polygon_gid () {
 		UPDATE $schema.$merg_table
 			SET gid = nextval('$schema.union_seq');"
 }
-# poloygon centroid to nearest other polygon centroi
+# polygon centroid to nearest other polygon centroid
 closest_centroid () {
 	psql -h $h -p $p -d $d -U $u -c "
 		WITH closest_centroid AS (
