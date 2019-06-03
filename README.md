@@ -20,25 +20,25 @@ The following steps are roughly taken until all polygons meet the mimimum value 
 
 #### Usage
 The script can be excecuted by passing __12__ arguments. Arguments simply need to be provided in the
-order that is shown below (without any flags). All argumgents are required.
+order that is shown below (without any flags). All argumgents are required. Input table needs to be set up (inlcuding required columns) before running.
 
   fn_merge_pg_polygons [arguments]
     
-    # Postgres settings
+    # Postgres settings // input
     --host        postgres server
-    --port        port
+    --port        postgres port
     --database    postgres database
     --username    postgres username
     
-    # Table settings
-    --schema      postgres schema
-    --input       target table
-    --output      output table
+    # Table settings // input
+    --schema      name of postgres schema
+    --input       name of target table
+    --output      name of output table
     
-    # Column settings
-    --gid         unique identifier 
-    --geom        polygon geometry column (polygon; projected)
-    --centroid    point geometry column (polygon centroid; projected)
+    # Column settings // input
+    --gid         column name unique identifier 
+    --geom        column name polygon geometry column (polygon; projected)
+    --centroid    column name point geometry column (polygon centroid; projected)
     
     # Aggregation settings
     --variable    column on which to base aggregation (e.g. containing population counts)
