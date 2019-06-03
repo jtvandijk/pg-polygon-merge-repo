@@ -1,4 +1,4 @@
-# Iteratively Merge Polygons in Postgres
+## Iteratively Merge Polygons in a Postgres/PostGIS database
 
 #### About
 Shell script (using psql) that allows you to iteratively merge (aggregate) adjacent polygons stored in a Postgres/PostGIS database using a minimum attribute value. 
