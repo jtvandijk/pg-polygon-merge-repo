@@ -23,8 +23,7 @@ val=${12}
 # drop sequence
 drop_sequence () {
 psql -h $h -p $p -d $d -U $u -c "
-	DROP SEQUENCE IF EXISTS $schema.union_seq;
-"
+	DROP SEQUENCE IF EXISTS $schema.union_seq;"
 }
 # create sequence
 create_sequence () {
