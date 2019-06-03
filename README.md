@@ -1,7 +1,7 @@
 ## Iteratively Merge Polygons in a Postgres/PostGIS database
 
 #### About
-Shell script (using psql) that allows you to iteratively merge (aggregate) adjacent polygons stored in a Postgres/PostGIS database using a minimum attribute value. 
+Shell script (using psql) that allows you to iteratively merge (aggregate) adjacent polygons stored in a Postgres/PostGIS database by considering a minimum required value for a given variable. 
 For instance, if you have polygons containing population data and you require all polygons to contain a minimum
 of 1,000 people, you can use this script to iteratively merge adjacent polygons until this threshold has been reached. With a large number of 
 polygons to be aggregated this process may be slow. 
@@ -15,7 +15,7 @@ The following steps are roughly taken until all polygons meet the mimimum value 
 3. Assigning unique identifiers to new (temporary) output table.
 4. Calcuating for each polygon centroid its nearest neighbour (centroid distance).
 5. Selecting the first polygon in the list of polygons (ids) that does not meet the minimum value requirements.
-6. Merge selected polygon with its nearest neighbour (centroid distance).
+6. Merge selected polygon with its nearest neighbour (centroid distance) and update value (sum of merge).
 7. Update polygon list (ids) that do not meet the minimum value requirements.
 
 #### Usage
