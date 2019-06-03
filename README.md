@@ -4,19 +4,19 @@
 Shell script (using psql) that allows you to iteratively merge (aggregate) adjacent polygons stored in a Postgres/PostGIS database using a minimum attribute value. 
 For instance, if you have polygons containing population data and you require all polygons to contain a minimum
 of 1,000 people, you can use this script to iteratively merge adjacent polygons until this threshold has been reached. With a large number of 
-polygons to be aggregate this process may be slow. 
+polygons to be aggregated this process may be slow. 
 
 __Iterative steps__
 
 The following steps are roughly taken until all polygons meet the mimimum value requirements.
 
-1. Copying relevant fields from input table to new output table.
-2. Creating relevant (spatial) indicees.
-3. Re-indexing new output table.
-4. Calcuating for each polygon centroid the nearest other centroid.
-5. Selecting the first one in the list of polygons (ids) that do not pass requirements.
+1. Copying relevant fields from input table to new (temporary) output table.
+2. Creating relevant (spatial) indices.
+3. Assigning unique identifiers to new (temporary) output table.
+4. Calcuating for each polygon centroid its nearest neighbour (centroid distance).
+5. Selecting the first polygon in the list of polygons (ids) that does not meet the minimum value requirements.
 6. Merge selected polygon with its nearest neighbour (centroid distance).
-7. Update polygon list (ids) that do not pass requirements.
+7. Update polygon list (ids) that do not meet the minimum value requirements.
 
 #### Usage
 The script can be excecuted by passing __12__ arguments. Arguments simply need to be provided in the
