@@ -1,0 +1,12 @@
+host: example.server.com
+port: 8080
+database: my_db
+username: username
+schema: my_schema
+input_table: my_input_table
+output_table: my_output_table
+unique_id: gid
+poly_geom: geom
+poly_cnet: centroid
+variable: population
+value: 1000
