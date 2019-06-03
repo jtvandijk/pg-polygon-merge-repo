@@ -1,7 +1,7 @@
 ## Iteratively Merge Polygons in a Postgres/PostGIS database
 
 #### About
-Shell script (using psql) that allows you to iteratively merge (aggregate) adjacent polygons stored in a Postgres/PostGIS database by considering a minimum required value for a given variable. For instance, if you have polygons containing population data and you require all polygons to contain a minimum of 1,000 people, you can use this script to iteratively merge adjacent polygons until this threshold has been reached. With a large number of polygons to be aggregated this process may be slow. Similar to the Python GeoPandas implementation: http://geopandas.org/aggregation_with_dissolve.html
+Shell script (using psql) that allows you to iteratively merge (aggregate) adjacent polygons stored in a Postgres/PostGIS database by considering a minimum required value for a given variable. For instance, if you have polygons containing population data and you require all polygons to contain a minimum of 1,000 people, you can use this script to iteratively merge adjacent polygons until this threshold has been reached ('aggregation with dissolve'). With a large number of polygons to be aggregated this process may be slow. 
 
 __Iterative steps__
 
