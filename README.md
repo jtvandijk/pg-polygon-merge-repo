@@ -52,6 +52,9 @@ order that is shown below (without any flags). All argumgents are required.
     # Execute
     fn_merge_pg_polygons server 8080 database username public polygons new_polygons gid geom centroid population 750
 
+#### Output
+The final output is a new table table in your Postgres/PostGIS database that contains the merged polygons, all of which will have at least the mimimum value for the variable of interest that was specified.
+
 #### Dependencies
 * __psql__ 
 * __awk__
