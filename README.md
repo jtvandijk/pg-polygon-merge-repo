@@ -18,29 +18,22 @@ The following steps are taken until all polygons meet the mimimum value requirem
 
 #### Usage
 The script can be excecuted by passing __12__ arguments. Arguments simply need to be provided to a config file in the
-order that is shown below. See _config_example.txt_ for an example. All arguments are required. Input table needs to be set up (including required columns) before running. 
+exact order that is shown below. See _config_example.txt_ for an example. All arguments are required. Input table needs to be set up (including required columns) before running. 
 
-  fn_merge_pg_polygons [arguments]
+  fn_merge_pg_polygons [configfile]
     
-    # Postgres settings // input
-    h           postgres server
-    p           postgres port
-    d           postgres database
-    u           postgres username
-    
-    # Table settings // input
-    schema      name of postgres schema
-    base_table  name of target table
-    merg_table  name of output table
-    
-    # Column settings // input
-    gid         column name unique identifier 
-    geom        column name polygon geometry column (polygon; projected)
-    cent        column name point geometry column (polygon centroid; projected)
-    
-    # Aggregation settings
-    var         column on which to base aggregation (e.g. containing population counts)
-    val         minimum threshold value (e.g. minimum of 1,000 people per polygon)
+    host:         postgres server
+    port:         postgres port
+    database:     postgres database
+    username:     postgres username
+    schema:       name of postgres schema
+    input_table:  name of target table
+    output_table: name of output table
+    unique_id:    column name unique identifier 
+    poly_geom:    column name polygon geometry column (polygon; projected)
+    poly_cent:    column name point geometry column (polygon centroid; projected)
+    variable:     column on which to base aggregation (e.g. containing population counts)
+    value:        minimum threshold value (e.g. minimum of 1,000 people per polygon)
 
 #### Examples
 
