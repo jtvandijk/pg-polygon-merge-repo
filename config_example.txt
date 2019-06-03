@@ -1,5 +1,5 @@
 host: example.server.com
-port: 8080
+port: 5432
 database: my_db
 username: username
 schema: my_schema
