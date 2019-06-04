@@ -1,5 +1,5 @@
 host: example.server.com
-port: 8080
+port: 5432
 database: my_db
 username: postgres
 password: postgres1234
@@ -8,6 +8,6 @@ input_table: my_input_table
 output_table: my_output_table
 unique_id: gid
 poly_geom: geom
-poly_cnet: centroid
+poly_cent: centroid
 variable: population
 value: 1000

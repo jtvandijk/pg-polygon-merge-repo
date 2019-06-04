@@ -1,7 +1,7 @@
 ## Iteratively Merge Polygons in a Postgres/PostGIS database
 
 #### About
-Shell script (using psql) that allows you to iteratively merge (aggregate) adjacent polygons stored in a Postgres/PostGIS database by considering a minimum required value for a given variable. For instance, if you have polygons containing population data and you require all polygons to contain a minimum of 1,000 people, you can use this script to iteratively merge adjacent polygons until this threshold has been reached. With a large number of polygons to be aggregated this process may be slow. 
+Shell script (using psql) that allows you to iteratively merge (aggregate) adjacent polygons stored in a Postgres/PostGIS database by considering a minimum required value for a given variable. For instance, if you have polygons containing population data and you require all polygons to contain a minimum of 1,000 people, you can use this script to iteratively merge adjacent polygons until this threshold has been reached ('aggregation with dissolve'). With a large number of polygons to be aggregated this process may be slow. 
 
 __Iterative steps__
 
@@ -17,6 +17,7 @@ The following steps are taken until all polygons meet the mimimum value requirem
 8. Repeat.
 
 #### Usage
+<<<<<<< HEAD
 The script can be executed by passing __13__ arguments. Arguments simply need to be provided to a config file in the
 order that is shown below. See _config_example.txt_ for an example. All arguments are required. Input table needs to be set up (including required columns) before running. 
 
@@ -42,6 +43,22 @@ order that is shown below. See _config_example.txt_ for an example. All argument
     # Aggregation settings
     var         column on which to base aggregation (e.g. containing population counts)
     val         minimum threshold value (e.g. minimum of 1,000 people per polygon)
+=======
+The script can be excecuted by passing __12__ arguments. Arguments simply need to be provided through a config file. All arguments are required. Arguments need to be in the exact order that is shown below. See _config_example.txt_ for an example. Please note that the nput table needs to be set up, including required columns, before running the script. 
+
+    host:         postgres server
+    port:         postgres port
+    database:     postgres database
+    username:     postgres username
+    schema:       name of postgres schema
+    input_table:  name of target table
+    output_table: name of output table
+    unique_id:    column name unique identifier 
+    poly_geom:    column name polygon geometry column (polygon; projected)
+    poly_cent:    column name point geometry column (polygon centroid; projected)
+    variable:     column on which to base aggregation (e.g. containing population counts)
+    value:        minimum threshold value (e.g. minimum of 1,000 people per polygon)
+>>>>>>> 45045a8cd2a93ecef5a26841e87e4f2c1b1c704b
 
 #### Examples
 
