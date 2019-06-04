@@ -1,7 +1,8 @@
 host: example.server.com
 port: 8080
 database: my_db
-username: username
+username: postgres
+password: postgres1234
 schema: my_schema
 input_table: my_input_table
 output_table: my_output_table

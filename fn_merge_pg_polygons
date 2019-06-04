@@ -16,20 +16,24 @@ h=$(cat $CONFIG | awk -F ":" '{if (NR==1) {print $2}}')
 p=$(cat $CONFIG | awk -F ":" '{if (NR==2) {print $2}}')
 d=$(cat $CONFIG | awk -F ":" '{if (NR==3) {print $2}}')
 u=$(cat $CONFIG | awk -F ":" '{if (NR==4) {print $2}}')
+pw=$(cat $CONFIG | awk -F ":" '{if (NR==5) {print $2}}')
 
 # table parameters
-schema=$(cat $CONFIG | awk -F ":" '{if (NR==5) {print $2}}')
-base_table=$(cat $CONFIG | awk -F ":" '{if (NR==6) {print $2}}')
-merg_table=$(cat $CONFIG | awk -F ":" '{if (NR==7) {print $2}}')
+schema=$(cat $CONFIG | awk -F ":" '{if (NR==6) {print $2}}')
+base_table=$(cat $CONFIG | awk -F ":" '{if (NR==7) {print $2}}')
+merg_table=$(cat $CONFIG | awk -F ":" '{if (NR==8) {print $2}}')
 
 # column names
-gid=$(cat $CONFIG | awk -F ":" '{if (NR==8) {print $2}}')
-geom=$(cat $CONFIG | awk -F ":" '{if (NR==9) {print $2}}')
-cent=$(cat $CONFIG | awk -F ":" '{if (NR==10) {print $2}}')
-var=$(cat $CONFIG | awk -F ":" '{if (NR==11) {print $2}}')
+gid=$(cat $CONFIG | awk -F ":" '{if (NR==9) {print $2}}')
+geom=$(cat $CONFIG | awk -F ":" '{if (NR==10) {print $2}}')
+cent=$(cat $CONFIG | awk -F ":" '{if (NR==11) {print $2}}')
+var=$(cat $CONFIG | awk -F ":" '{if (NR==12) {print $2}}')
 
 # union parameters
-val=$(cat $CONFIG | awk -F ":" '{if (NR==12) {print $2}}')
+val=$(cat $CONFIG | awk -F ":" '{if (NR==13) {print $2}}')
+
+#pw
+export PGPASSWORD=$pw
 
 # drop sequence
 drop_sequence () {
@@ -202,3 +206,6 @@ loop_pg_merge () {
 
 #execute
 loop_pg_merge
+
+#done
+unset PGPASSWORD

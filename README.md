@@ -17,7 +17,7 @@ The following steps are taken until all polygons meet the mimimum value requirem
 8. Repeat.
 
 #### Usage
-The script can be excecuted by passing __12__ arguments. Arguments simply need to be provided to a config file in the
+The script can be executed by passing __13__ arguments. Arguments simply need to be provided to a config file in the
 order that is shown below. See _config_example.txt_ for an example. All arguments are required. Input table needs to be set up (including required columns) before running. 
 
   fn_merge_pg_polygons [arguments]
@@ -27,6 +27,7 @@ order that is shown below. See _config_example.txt_ for an example. All argument
     p           postgres port
     d           postgres database
     u           postgres username
+    pw	postgres password for database
     
     # Table settings // input
     schema      name of postgres schema
@@ -51,7 +52,7 @@ order that is shown below. See _config_example.txt_ for an example. All argument
     ./fn_merge_pg_polygons server --config="config_example.txt"
 
 #### Output
-The final output is a new table table in your Postgres/PostGIS database that contains the merged polygons, all of which will have at least the desired mimimum value for the variable of interest that was specified.
+The final output is a new table table in your Postgres/PostGIS database that contains the merged polygons, all of which will have at least the desired minimum value for the variable of interest that was specified.
 
 #### Dependencies
 * __psql__ 
