@@ -27,7 +27,7 @@ order that is shown below. See _config_example.txt_ for an example. All argument
     p           postgres port
     d           postgres database
     u           postgres username
-    pw	        postgres password for database
+    pw          postgres password for database
     
     # Table settings // input
     schema      name of postgres schema
