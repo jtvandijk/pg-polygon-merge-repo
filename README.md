@@ -17,7 +17,6 @@ The following steps are taken until all polygons meet the mimimum value requirem
 8. Repeat.
 
 #### Usage
-<<<<<<< HEAD
 The script can be executed by passing __13__ arguments. Arguments simply need to be provided to a config file in the
 order that is shown below. See _config_example.txt_ for an example. All arguments are required. Input table needs to be set up (including required columns) before running. 
 
@@ -28,7 +27,7 @@ order that is shown below. See _config_example.txt_ for an example. All argument
     p           postgres port
     d           postgres database
     u           postgres username
-    pw	postgres password for database
+    pw          postgres password for database
     
     # Table settings // input
     schema      name of postgres schema
@@ -43,13 +42,14 @@ order that is shown below. See _config_example.txt_ for an example. All argument
     # Aggregation settings
     var         column on which to base aggregation (e.g. containing population counts)
     val         minimum threshold value (e.g. minimum of 1,000 people per polygon)
-=======
-The script can be excecuted by passing __12__ arguments. Arguments simply need to be provided through a config file. All arguments are required. Arguments need to be in the exact order that is shown below. See _config_example.txt_ for an example. Please note that the nput table needs to be set up, including required columns, before running the script. 
+
+The script can be executed by passing __13__ arguments. Arguments simply need to be provided through a config file. All arguments are required. Arguments need to be in the exact order that is shown below. See _config_example.txt_ for an example. Please note that the nput table needs to be set up, including required columns, before running the script. 
 
     host:         postgres server
     port:         postgres port
     database:     postgres database
     username:     postgres username
+    pw:           postgres password database
     schema:       name of postgres schema
     input_table:  name of target table
     output_table: name of output table
@@ -58,7 +58,6 @@ The script can be excecuted by passing __12__ arguments. Arguments simply need t
     poly_cent:    column name point geometry column (polygon centroid; projected)
     variable:     column on which to base aggregation (e.g. containing population counts)
     value:        minimum threshold value (e.g. minimum of 1,000 people per polygon)
->>>>>>> 45045a8cd2a93ecef5a26841e87e4f2c1b1c704b
 
 #### Examples
 
