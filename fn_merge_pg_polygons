@@ -32,7 +32,7 @@ var=$(cat $CONFIG | awk -F ":" '{if (NR==12) {print $2}}')
 # union parameters
 val=$(cat $CONFIG | awk -F ":" '{if (NR==13) {print $2}}')
 
-#pw
+# pw
 export PGPASSWORD=$pw
 
 # drop sequence
@@ -204,8 +204,8 @@ loop_pg_merge () {
 	drop_sequence
 }
 
-#execute
+# execute
 loop_pg_merge
 
-#done
+# done
 unset PGPASSWORD
